@@ -52,26 +52,27 @@ Create a `.env` file in the root directory and add:
 PORT=5000
 NODE_ENV=development
 
-# MongoDB Atlas connection
-DATABASE=mongodb+srv://kkaif1778:zJfGn1FOAmE4c30V@cluster0.fqgbdig.mongodb.net/busbooking?retryWrites=true&w=majority&appName=Cluster0
+# MongoDB connection
+DATABASE=mongodb+srv://<username>:<password>@cluster0.mongodb.net/busbooking?retryWrites=true&w=majority&appName=Cluster0
 
 # JWT settings
-JWT_SECRET=supersecurejwt123!
+JWT_SECRET=your-jwt-secret-key
 JWT_EXPIRES_IN=7d
 
-# Stripe (for payment, replace with real key if needed)
-STRIPE_SECRET_KEY=your-stripe-secret-key-here
+# Stripe (for payments)
+STRIPE_SECRET_KEY=your-stripe-secret-key
 
-# Mailtrap SMTP Example (Dummy Values - Replace with yours)
-EMAIL_HOST=sandbox.smtp.mailtrap.io
+# Email SMTP settings (Mailtrap or other service)
+EMAIL_HOST=smtp.mailtrap.io
 EMAIL_PORT=2525
-EMAIL_USER=1234567890abcdef
-EMAIL_PASS=abcdef1234567890
+EMAIL_USER=your-mailtrap-username
+EMAIL_PASS=your-mailtrap-password
 EMAIL_FROM="Bus Ticketing <noreply@busbooking.com>"
 
 # App URLs
-PROD_URL=http://your-website.com
+PROD_URL=http://your-production-url.com
 DEV_URL=http://localhost:3000
+
 ```
 
 ### 4️⃣ Start the server
